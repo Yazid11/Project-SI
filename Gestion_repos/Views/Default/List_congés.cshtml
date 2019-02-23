@@ -1,0 +1,382 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+@using Gestion_repos.Controllers
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resale a Business Category Flat Bootstrap Responsive Website Template | Kids :: w3layouts</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap-select.css">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="~/css/jquery-ui1.css">
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Eri~/csson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <!--fonts-->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <!-- js -->
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <!-- js -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/bootstrap-select.js"></script>
+    <script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+    </script>
+    <script type="text/javascript" src="~/js/jquery.leanModal.min.js"></script>
+    <link href="~/css/jquery.uls.css" rel="stylesheet" />
+    <style>
+        .containerr {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerr input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerr:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.containerr input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerr .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+    </style>
+    <link href="css/jquery.uls.grid.css" rel="stylesheet" />
+    <link href="css/jquery.uls.lcd.css" rel="stylesheet" />
+    <!-- Source -->
+    <script src="~/js/jquery.uls.data.js"></script>
+    <script src="~/js/jquery.uls.data.utils.js"></script>
+    <script src="~/js/jquery.uls.lcd.js"></script>
+    <script src="~/js/jquery.uls.languagefilter.js"></script>
+    <script src="~/js/jquery.uls.regionfilter.js"></script>
+    <script src="~/js/jquery.uls.core.js"></script>
+    <script>
+			$( document ).ready( function() {
+				$( '.uls-trigger' ).uls( {
+					onSelect : function( language ) {
+						var languageName = $.uls.data.getAutonym( language );
+						$( '.uls-trigger' ).text( languageName );
+					},
+					quickList: ['en', 'hi', 'he', 'ml', 'ta', 'fr'] //FIXME
+				} );
+			} );
+    </script>
+    <script src="~/js/tabs.js"></script>
+    <script type="text/javascript">
+$(document).ready(function () {
+var elem=$('#container ul');
+	$('#viewcontrols a').on('click',function(e) {
+		if ($(this).hasClass('gridview')) {
+			elem.fadeOut(1000, function () {
+				$('#container ul').removeClass('list').addClass('grid');
+				$('#viewcontrols').removeClass('view-controls-list').addClass('view-controls-grid');
+				$('#viewcontrols .gridview').addClass('active');
+				$('#viewcontrols .listview').removeClass('active');
+				elem.fadeIn(1000);
+			});
+		}
+		else if($(this).hasClass('listview')) {
+			elem.fadeOut(1000, function () {
+				$('#container ul').removeClass('grid').addClass('list');
+				$('#viewcontrols').removeClass('view-controls-grid').addClass('view-controls-list');
+				$('#viewcontrols .gridview').removeClass('active');
+				$('#viewcontrols .listview').addClass('active');
+				elem.fadeIn(1000);
+			});
+		}
+	});
+});
+    </script>
+</head>
+<body>
+    <div class="header">
+
+        <div class="container">
+            <div class="logo">
+                <a href="Acceuil.cshtml"><span>M</span>M</a>
+            </div>
+            <div class="header-right">
+                <span class="active uls-trigger">@ViewBag.c</span> &nbsp;&nbsp;
+                <a class="account" href="Login.cshtml">Déconnexion</a>
+                <!-- Large modal -->
+                <div class="selectregion">
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        Please Choose Your Location
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <select id="basic2" class="show-tick form-control" multiple></select>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+				$('#myModal').modal('');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner text-center">
+        <div background-image="~/images/bannerv.jpg">
+            <div class="container">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/Default/Ajouter">Ajouter un employee</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;
+                <a href="/Default/Repos">Définir le planing d'une semaine</a><br /><br />
+                <a href="/Default/Planing">Consulter le plaling de la semaine actuelle </a> &nbsp;
+                <a href="/Default/List_congé">Demandes de congé</a> &nbsp;
+                <a href="">P.V</a>
+            </div>
+        </div>
+    </div>
+    <!-- Kids -->
+    <div class="total-ads main-grid-border">
+        <div class="container">
+            <div class="select-box">
+                <div class="select-city-for-local-ads ads-list">
+                    <h1>List des demandes des congés</h1>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="ads-grid">
+                <div class="ads-display col-md-9">
+                    <div class="wrapper">
+                        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                            <form method="post" action="List_congés">
+                            <div id="myTabContent" class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                                    <div>
+                                        <div id="container">
+                                            <div class="view-controls-list" id="viewcontrols">
+                                                <label>view :</label>
+                                                <a class="gridview"><i class="glyphicon glyphicon-th"></i></a>
+                                                <a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>
+                                            </div>
+                                            <div class="sort">
+                                                <div class="sort-by">
+                                                    <label>Selectionner le jour</label>
+                                                    <select>
+                                                        <option value="">Most recent</option>
+                                                        <option value="">Price: Rs Low to High</option>
+                                                        <option value="">Price: Rs High to Low</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            @using System.Globalization;
+                                            @{  DateTime enteredDate = new DateTime();
+                                                enteredDate = DateTime.Now;
+                                                int num = CultureInfo.CurrentUICulture.Calendar.GetWeekOfYear(enteredDate, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+                                                var list = (from c in new ReposEntities().Demande_congé select c);
+
+                                            }
+                                            <ul class="list">
+
+                                                @foreach (var x in list)
+                                                {
+                                                    Employe emp = new Employe();
+                                                    emp = new ReposEntities().Employe.Where(m => m.Id == x.Id).SingleOrDefault();
+                                                    int a = 0;
+                                                    if (emp != null)
+                                                    {
+                                                        List<string> liste = new List<string>();                         
+                                                            <a href="single.html">
+                                                                <li id="@a">
+                                                                    <img src="images/k1.jpg" title="" alt="" />
+                                                                    <section class="list-left">
+                                                                        <h5 class="title">
+                                                                            @emp.Nom   @emp.Préonm
+                                                                        </h5>
+                                                                        <span class="adprice">Semaine de :</span>
+                                                                        @DefaultController.FirstDateOfWeek(2018,x.semaine).ToString();
+                                                                    </section>
+                                                                    <section class="list-right">
+                                                                        @{DateTime datee = new DateTime();}
+                                                                        <span class="date">
+                                                                       <label class="containerr">
+                                                                        <input  type="checkbox" value=@x.Id_demende.ToString() name="@x.Id_demende">
+                                                                        <span class="checkmark"></span>
+                                                                         </label></span>
+                                                                    </section>
+                                                                    <div class="clearfix"></div>
+                                                                </li>
+                                                            </a>
+                                                    a++;
+                                                                                    
+                                                                                }
+                                                                            }
+                                                <div class="clearfix"></div>
+                                                </a>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                                <script>
+                                                     $(document).ready(function(){
+                                                         $().mouseenter(function(){
+                                                          });
+                                                              });
+                                </script>
+                                <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                                    <div>
+                                        <div id="container">
+                                            <div class="view-controls-list" id="viewcontrols">
+                                                <label> </label>
+                                                <a class="gridview"><i class="glyphicon glyphicon-th"></i></a>
+                                                <a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>
+                                            </div>
+                                            <div class="sort">
+                                                <div class="sort-by">
+                                                    <label>
+                                                        @{
+                                                        DateTime date = new DateTime();
+                                                    }
+                                                    @date.DayOfWeek.ToString();
+                                                </label>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                     </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pagination pagination-sm">
+                                <li><a href="#">Prev</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">Next</a></li>
+                            </ul><br />
+                                <input type="submit" value="Envoyer" name="fe"/>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+           
+            </form>
+    </div>
+</div>
+<!-- // Kids -->
+<!--footer section start-->
+<footer>
+    <div class="footer-bottom text-center">
+        <div class="container">
+         
+            <div class="footer-social-icons">
+                <ul>
+                    <li><a class="facebook" href="#"><span>Facebook</span></a></li>
+                    <li><a class="twitter" href="#"><span>Twitter</span></a></li>
+                    <li><a class="flickr" href="#"><span>Flickr</span></a></li>
+                    <li><a class="googleplus" href="#"><span>Google+</span></a></li>
+                    <li><a class="dribbble" href="#"><span>Dribbble</span></a></li>
+                </ul>
+            </div>
+            <div class="copyrights">
+                <p> © 2016 Resale. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</footer>
+<!--footer section end-->
+</body>
+</html>

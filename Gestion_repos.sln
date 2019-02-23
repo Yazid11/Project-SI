@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_repos", "Gestion_repos\Gestion_repos.csproj", "{E8451817-ED01-4A04-BC54-0E3C3CB15E08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion_repos.Tests", "Gestion_repos.Tests\Gestion_repos.Tests.csproj", "{445CF156-6A5A-47CB-8101-98A318707C71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8451817-ED01-4A04-BC54-0E3C3CB15E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8451817-ED01-4A04-BC54-0E3C3CB15E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8451817-ED01-4A04-BC54-0E3C3CB15E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8451817-ED01-4A04-BC54-0E3C3CB15E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445CF156-6A5A-47CB-8101-98A318707C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445CF156-6A5A-47CB-8101-98A318707C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445CF156-6A5A-47CB-8101-98A318707C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445CF156-6A5A-47CB-8101-98A318707C71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

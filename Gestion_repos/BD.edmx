@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ReposModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Repos.dbo.Demande_congé' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Demande_congé">
+          <Key>
+            <PropertyRef Name="Id_demende" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="semaine" />
+          </Key>
+          <Property Name="Id_demende" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="semaine" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employe">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nom" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Préonm" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Age" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="photo" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Repos">
+          <Key>
+            <PropertyRef Name="Id_repos" />
+          </Key>
+          <Property Name="Id_repos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="num_sem" Type="int" Nullable="false" />
+          <Property Name="jour" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="shift" Type="int" Nullable="false" />
+          <Property Name="congé" Type="int" />
+          <Property Name="Type_congé" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Responsable">
+          <Key>
+            <PropertyRef Name="Mail" />
+          </Key>
+          <Property Name="Mail" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Mdp" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ReposModelStoreContainer">
+          <EntitySet Name="Employe" EntityType="Self.Employe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Repos" EntityType="Self.Repos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Responsable" EntityType="Self.Responsable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Demande_congé" EntityType="Self.Demande_congé" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Demande_congé].[Id_demende] AS [Id_demende], 
+    [Demande_congé].[Id] AS [Id], 
+    [Demande_congé].[semaine] AS [semaine]
+    FROM [dbo].[Demande_congé] AS [Demande_congé]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ReposModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ReposEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employe" EntityType="ReposModel.Employe" />
+          <EntitySet Name="Responsable" EntityType="ReposModel.Responsable" />
+          <EntitySet Name="Repos" EntityType="ReposModel.Repos" />
+          <EntitySet Name="Demande_congé" EntityType="ReposModel.Demande_congé" />
+        </EntityContainer>
+        <EntityType Name="Employe">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nom" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Préonm" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Age" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="photo" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Responsable">
+          <Key>
+            <PropertyRef Name="Mail" />
+          </Key>
+          <Property Name="Mail" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="Mdp" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Repos">
+          <Key>
+            <PropertyRef Name="Id_repos" />
+          </Key>
+          <Property Name="Id_repos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="num_sem" Type="Int32" Nullable="false" />
+          <Property Name="jour" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="shift" Type="Int32" Nullable="false" />
+          <Property Name="congé" Type="Int32" />
+          <Property Name="Type_congé" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Demande_congé">
+          <Key>
+            <PropertyRef Name="Id_demende" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="semaine" />
+          </Key>
+          <Property Name="Id_demende" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="semaine" Type="Int32" Nullable="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ReposModelStoreContainer" CdmEntityContainer="ReposEntities">
+          <EntitySetMapping Name="Employe">
+            <EntityTypeMapping TypeName="ReposModel.Employe">
+              <MappingFragment StoreEntitySet="Employe">
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Préonm" ColumnName="Préonm" />
+                <ScalarProperty Name="Nom" ColumnName="Nom" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Responsable">
+            <EntityTypeMapping TypeName="ReposModel.Responsable">
+              <MappingFragment StoreEntitySet="Responsable">
+                <ScalarProperty Name="Mdp" ColumnName="Mdp" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Repos">
+            <EntityTypeMapping TypeName="ReposModel.Repos">
+              <MappingFragment StoreEntitySet="Repos">
+                <ScalarProperty Name="Type_congé" ColumnName="Type_congé" />
+                <ScalarProperty Name="congé" ColumnName="congé" />
+                <ScalarProperty Name="shift" ColumnName="shift" />
+                <ScalarProperty Name="jour" ColumnName="jour" />
+                <ScalarProperty Name="num_sem" ColumnName="num_sem" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_repos" ColumnName="Id_repos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Demande_congé">
+            <EntityTypeMapping TypeName="ReposModel.Demande_congé">
+              <MappingFragment StoreEntitySet="Demande_congé">
+                <ScalarProperty Name="semaine" ColumnName="semaine" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_demende" ColumnName="Id_demende" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

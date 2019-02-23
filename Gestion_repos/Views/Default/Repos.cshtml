@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Gestion_repos.Employe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .d{
+            margin:20px;
+        }
+    </style>
+    <title>Table V03</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <form action="da" method="post">
+        <div class="limiter">
+            <div class="container-table100">
+                <input type="date" class="d" name="debut" />  
+                <hr />  
+                <br /> 
+                <br /> 
+              <div class="wrap-table100">
+                    <div class="table100 ver1 m-b-110">
+                      <table data-vertable="ver1">
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="column100 column1" data-column="column1"></th>
+                                    <th class="column100 column3" data-column="column3">Lundi</th>
+                                    <th class="column100 column4" data-column="column4">Mardi</th>
+                                    <th class="column100 column5" data-column="column5">Mercredi</th>
+                                    <th class="column100 column6" data-column="column6">Jeudi</th>
+                                    <th class="column100 column7" data-column="column7">Vendredi</th>
+                                    <th class="column100 column8" data-column="column8">Saturday</th>
+                                    <th class="column100 column2" data-column="column2">Dimanche</th>
+                                    <th class="column100 column8" data-column="column8">Shift</th>
+                                    <th class="column100 column8" data-column="column8">Congé</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var x in Model)
+                                {
+                                    <tr class="row100">
+                                        <td class="column100 column1" data-column="column1">@x.Nom  @x.Préonm</td>@{string a = x.Id + "L";};
+                                        <td class="column100 column2" data-column="column2"><input type="checkbox"  value="@x.Id+L" name="@x.Id+L"/></td>
+                                        <td class="column100 column3" data-column="column3"><input type="checkbox"  value="@x.Id+M" name="@x.Id+M"/></td>
+                                        <td class="column100 column4" data-column="column4"><input type="checkbox"  value="@x.Id+Me" name="@x.Id+Me"/></td>
+                                        <td class="column100 column5" data-column="column5"><input type="checkbox"  value="@x.Id+J" name="@x.Id+J"/></td>
+                                        <td class="column100 column6" data-column="column6"><input type="checkbox"  value="@x.Id+V" name="@x.Id+V"/></td>
+                                        <td class="column100 column7" data-column="column7"><input type="checkbox"   value="@x.Id+S"name="@x.Id+S"/></td>
+                                        <td class="column100 column8" data-column="column8"><input type="checkbox" value="@x.Id+D" name="@x.Id+D"/></td>
+                                        <td class="column100 column8" data-column="column8"><input type="number" size="8" name="shift+@x.Id"</td>
+                                        <td class="column100 column8" data-column="column8"><input type="checkbox" name="conge+@x.Id" id="conge+@x.Id"</td>          
+                                    </tr>
+                                  }
+                            </tbody>
+                        </table>
+                    </div>
+                    <input type="submit" value="Valider" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--===============================================================================================-->
+    <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/js/main.js"></script>
+</body>
+</html>
